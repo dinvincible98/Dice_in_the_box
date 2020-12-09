@@ -8,7 +8,7 @@ This is a default project "Jack/Dice in the box" for ME314 Machine Dynamics at N
 
 ![2020-12-08 10-57](https://user-images.githubusercontent.com/70287453/101658699-defae280-3a0a-11eb-86d6-e8e3f1ea89b1.jpeg)
 
-* Transformation of frames in program are list below:
+* Transformations of frame in the program are list below:
 
       g_WB1: The transformation from world to center of the box(0, x_box, y_box)
 
@@ -26,5 +26,14 @@ This is a default project "Jack/Dice in the box" for ME314 Machine Dynamics at N
       
 ![Screenshot from 2020-12-08 11-05-24](https://user-images.githubusercontent.com/70287453/101659321-8b3cc900-3a0b-11eb-8816-d57be1043692.png)
 
+#  Calculation Description
 
-# 
+* Eular-Lagrange Equations:
+
+To calculate the EL-Equations, the first thing to do is to find the kinetic and potential energy of the
+whole system (Box and Dice). The velocity of the dice and box can be calculated by their rigid-body
+transformation from world frame(g_WB and g_WD). The inertia matrices is a diagonal matrix of
+vector [1, 1, J_box/J_dice] and I used 1 for both inertia of box and dice (Assume the center of the mass
+is the center of the geometry). The kinetic energy then can be calculated after finding the velocity and
+inertia matrices. The potential energy of the system is also calculated from the rigid-body
+transformation of objects in world frame.
