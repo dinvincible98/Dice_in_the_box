@@ -65,7 +65,7 @@ Formulas:
       
       Fy = -k * (y_box - yd_box) + m1 * g     # Force in y direction
 
-
+![Screenshot from 2020-12-09 11-03-23](https://user-images.githubusercontent.com/70287453/101661703-364e8200-3a0e-11eb-8494-28f4a1fffdd0.png)
 
 
 
