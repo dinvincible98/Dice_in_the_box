@@ -95,6 +95,9 @@ Simulation Demo:
 
 ![Dice_in_box](https://user-images.githubusercontent.com/70287453/101666515-ee325e00-3a13-11eb-9b80-5d5b03c92d97.gif)
 
+Plots:
+
+
 
 
 
