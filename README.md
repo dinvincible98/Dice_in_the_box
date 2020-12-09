@@ -36,8 +36,10 @@ transformation from world frame(g_WB and g_WD). The inertia matrices is a diagon
 vector [1, 1, J_box/J_dice] and I used 1 for both inertia of box and dice (Assume the center of the mass
 is the center of the geometry). The kinetic energy then can be calculated after finding the velocity and
 inertia matrices. The potential energy of the system is also calculated from the rigid-body
-transformation of objects in world frame.
-      
+transformation of objects in world frame. After getting the kinetic and potential energy of the system, I can derive the Lagrangian equation of the system.
+
+Formulas:
+
       KE = 0.5 * ((V_box.T) * I_box * V_box + (V_dice.T) * I_dice * V_dice) 
       
       PE = g * (m1 * h_box + m2 *h_dice)
@@ -45,6 +47,27 @@ transformation of objects in world frame.
       L = KE - PE
 
 ![Screenshot from 2020-12-09 10-49-57](https://user-images.githubusercontent.com/70287453/101660426-c5f33100-3a0c-11eb-886d-139d81b37a45.png)
+
+Then, I can derive the EL- equations using the Lagrangian equations. The external forces in
+this system apply to the x and y of the box so the box will move along a diagonal line. The force is
+large enough that the box is constrained along the trajectory and the impact should not affect x and y
+velocity of the box.
+
+Formulas:
+
+      EL = ddtdL/dqdot - dL/dq               
+      
+      xd_box = -cos(t * pi/360)               # Desird trajectory in x direction
+      
+      yd_box = sin(t * pi/360)                # Desird trajectory in y direction
+      
+      Fx = -k * (x_box - xd_box)              # Force in x direction
+      
+      Fy = -k * (y_box - yd_box) + m1 * g     # Force in y direction
+
+
+
+
 
 
 
