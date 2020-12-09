@@ -39,7 +39,12 @@ inertia matrices. The potential energy of the system is also calculated from the
 transformation of objects in world frame.
       
       KE = 0.5 * ((V_box.T) * I_box * V_box + (V_dice.T) * I_dice * V_dice) 
+      
       PE = g * (m1 * h_box + m2 *h_dice)
-      L = KE - PE 
+      
+      L = KE - PE
+
+![Screenshot from 2020-12-09 10-49-57](https://user-images.githubusercontent.com/70287453/101660426-c5f33100-3a0c-11eb-886d-139d81b37a45.png)
+
 
 
