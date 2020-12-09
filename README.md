@@ -23,5 +23,8 @@ This is a default project "Jack/Dice in the box" for ME314 Machine Dynamics at N
       g_WD: The transformation from world to dice frame.(g_WD1*g_WD2)
 
       g_BD: Transformation from box frame to dice frame.(g_WB^-1 *g_WD)
+      
+![Screenshot from 2020-12-08 11-05-24](https://user-images.githubusercontent.com/70287453/101659321-8b3cc900-3a0b-11eb-8816-d57be1043692.png)
+
 
 # 
