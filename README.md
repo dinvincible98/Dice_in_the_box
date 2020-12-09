@@ -41,5 +41,5 @@ transformation of objects in world frame.
       KE = 0.5 * ((V_box.T) * I_box * V_box + (V_dice.T) * I_dice * V_dice) 
       PE = g * (m1 * h_box + m2 *h_dice)
       L = KE - PE 
-      [0.5(𝑑𝑑𝑡𝜃𝑏(𝑡))2+0.5(𝑑𝑑𝑡𝜃𝑑(𝑡))2+3.0(𝑑𝑑𝑡xb(𝑡))2+0.5(𝑑𝑑𝑡xd(𝑡))2+3.0(𝑑𝑑𝑡yb(𝑡))2+0.5(𝑑𝑑𝑡yd(𝑡))2]
+
 
