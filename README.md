@@ -59,7 +59,8 @@ Eular-Lagrange:
 <p align="center">      
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;}{\partial&space;t}\frac{\partial&space;L}{\partial&space;\dot{q}}&space;-&space;\frac{\partial&space;L}{\partial&space;q}&space;=&space;F" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;}{\partial&space;t}\frac{\partial&space;L}{\partial&space;\dot{q}}&space;-&space;\frac{\partial&space;L}{\partial&space;q}&space;=&space;F" title="\frac{\partial }{\partial t}\frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = F" /></a>              
 </p>
-      
+External Focre:
+
       xd_box = -cos(t * pi/360)               # Desird trajectory in x direction
       
       yd_box = sin(t * pi/360)                # Desird trajectory in y direction
