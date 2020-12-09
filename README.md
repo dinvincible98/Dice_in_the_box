@@ -87,15 +87,15 @@ The impact update involves the configuration of dice and box. To detect impacts,
 After getting all phi conditions, the impact_update function will takes a current configuration and calculates the next configuration after impacting. At start of function, phi_impact is called to receive a matrix for phi equations. Then, the index of phi is determined based on the minimum distance between x or y value of the vertex and the side of the box. Finally, this function will return a new configuration that is calculated by a non-zero lambda result.
 
 
-* Results:
+# Results:
 
 Firstly, I want to check if the signs of phi equation changes then use impact_update function to receiveupdated configuration. After getting all the impact updates, I simulate the dice bouncing in the box for 5 seconds using a time step of 0.01. The dice has smooth motion when contacting with the box(No oscillation on the side of the box or crossing the boundary). The movement of the dice (Fall, collision and rotation) looks reasonable during the whole simulation and the box is moving along the designed trajectory without impacting by the dice as expected.
 
-Simulation Demo:
+* Simulation Demo:
 
 ![Dice_in_box](https://user-images.githubusercontent.com/70287453/101666515-ee325e00-3a13-11eb-9b80-5d5b03c92d97.gif)
 
-Plots:
+* Plots:
 
 ![Screenshot from 2020-12-09 11-46-18](https://user-images.githubusercontent.com/70287453/101666877-45d0c980-3a14-11eb-90cf-0e952c4364e8.png)
 
