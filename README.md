@@ -28,7 +28,7 @@ This is a default project "Jack/Dice in the box" for ME314 Machine Dynamics at N
 
 #  Calculation Description
 
-1. Eular-Lagrange Equations & External forces & Constraint:
+## Eular-Lagrange Equations & External forces & Constraint:
 
 To calculate the EL-Equations, the first thing to do is to find the kinetic and potential energy of the
 whole system (Box and Dice). The velocity of the dice and box can be calculated by their rigid-body
@@ -73,7 +73,7 @@ EL - equations. And the final EL is shown below:
 
 ![Screenshot from 2020-12-09 11-03-23](https://user-images.githubusercontent.com/70287453/101661703-364e8200-3a0e-11eb-8494-28f4a1fffdd0.png)
 
-2. Impact updates:
+## Impact updates:
 
 Impact Equations:
 <p align ="center">
