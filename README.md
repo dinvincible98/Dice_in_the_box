@@ -28,7 +28,7 @@ This is a default project "Jack/Dice in the box" for ME314 Machine Dynamics at N
 
 #  Calculation Description
 
-* Eular-Lagrange Equations:
+* Eular-Lagrange Equations & External forces & Constraint:
 
 To calculate the EL-Equations, the first thing to do is to find the kinetic and potential energy of the
 whole system (Box and Dice). The velocity of the dice and box can be calculated by their rigid-body
@@ -54,6 +54,7 @@ large enough that the box is constrained along the trajectory and the impact sho
 velocity of the box.
 
 Formulas:
+      <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;}{\partial&space;t}\frac{\partial&space;L}{\partial&space;\dot{q}}&space;-&space;\frac{\partial&space;L}{\partial&space;q}&space;=&space;F" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;}{\partial&space;t}\frac{\partial&space;L}{\partial&space;\dot{q}}&space;-&space;\frac{\partial&space;L}{\partial&space;q}&space;=&space;F" title="\frac{\partial }{\partial t}\frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = F" /></a>
 
       EL = ddtdL/dqdot - dL/dq               
       
@@ -70,7 +71,15 @@ EL - equations. And the final EL is shown below:
 
 ![Screenshot from 2020-12-09 11-03-23](https://user-images.githubusercontent.com/70287453/101661703-364e8200-3a0e-11eb-8494-28f4a1fffdd0.png)
 
+* Impact updates:
 
+Impact Equations:
+
+      
+
+The impact update involves the configuration of dice and box. To detect impacts, I defined a phi_impact function. This function takes an input current configuration and returns a 8-vector matrix consist of 8 elements: A_dx, B_dx, C_dx, D_dx, A_dy, B_dy, C_dy, D_dy. Each element stands for the x or y configuration of the vertices of the dice.(A, B, C, D are 4 vertices of the dice shown in graph). The dice is likely to hit the box if it moving faster than the box. if velocity of dice is smaller than box in x or y direction, the four phi equations of each vertices should be in form (dx Or dy + L/2). If the velocity of the dice is larger, then each vertices should be in form (dx or dy - L/2). Once all phi equations change signs, impact may occur. Nevertheless, when the dice is so close to box that onevertex already exceeds boundary, sign of phi may not have changed when calling impact_condition function. To eliminate this exception, the phi_impact function checks if any x or y values of vertex exceeds a maximum (L/2) and returns corresponding index of phi in the matrix that should be experiencing impact.
+
+After getting all phi conditions, the impact_update function will takes a current configuration and calculates the next configuration after impacting. At start of function, phi_impact is called to receive a matrix for phi equations. Then, the index of phi is determined based on the minimum distance between x or y value of the vertex and the side of the box. Finally, this function will return a new configuration that is calculated by a non-zero lambda result.
 
 
 
